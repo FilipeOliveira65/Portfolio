@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Mono+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik Mono One", monospace;
+  color: #fff;
+  overflow-x: hidden;
+  background: linear-gradient(100deg, #100C33 0%, #392c9b 85%);
+}
+
+header {
+  height: 12vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: linear-gradient(100deg, #100C33 0%, #2c2081 51%, #392c9b 85%);
+  font-family: "Bebas Neue", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+}
+header #logo {
+  font-size: 40px;
+  color: #68657D;
+  width: 150px;
+}
+header nav {
+  color: #ffff44;
+  font-size: 25px;
+  position: relative;
+  right: 100px;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+}
+header nav ul li {
+  list-style-type: none;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+header nav ul li a span {
+  display: none;
+}
+header nav ul li a:hover {
+  transition: 0.5s ease;
+  color: #24fe00;
+}
+header nav ul li a:hover span {
+  display: inline;
+  transition: 1s ease;
+}
+header nav ul li:first-child {
+  margin-left: 0;
+}
+
+#initial {
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+  justify-content: end;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.appear {
+  animation: appear 2s;
+}
+
+#principal {
+  min-height: 80vh;
+  width: 100vw;
+}
+#principal #decoration1, #principal #decoration2, #principal #decoration3, #principal #decoration4 {
+  height: 100px;
+  width: 150px;
+  position: absolute;
+}
+#principal #decoration1 div, #principal #decoration2 div, #principal #decoration3 div, #principal #decoration4 div {
+  height: 0.5px;
+  width: 150px;
+  margin: 8px;
+  margin-left: 0;
+  background-color: #24fe00;
+  position: sticky;
+}
+#principal #decoration1 {
+  top: 200px;
+  left: -80px;
+  transform: rotateZ(55deg);
+}
+#principal #decoration2 {
+  top: 200px;
+  left: -80px;
+  transform: rotateZ(-30deg);
+}
+#principal #decoration3 {
+  bottom: 0px;
+  left: -80px;
+  transform: rotateZ(20deg);
+}
+#principal #decoration4 {
+  bottom: 10px;
+  left: -80px;
+  transform: rotateZ(60deg);
+}
+#principal #about {
+  max-height: 165vh;
+  width: 80vw;
+  padding: 0 0 0 4vw;
+}
+#principal #about #mark0 {
+  height: 90px;
+  background-color: transparent;
+}
+#principal #about #nameOcup #ocp {
+  font-size: 30px;
+  color: #68657d;
+}
+#principal #about #nameOcup h1 {
+  font-size: 50px;
+  color: #dd7cfc;
+}
+#principal #about #resume {
+  color: #eebdff;
+  font-size: 35px;
+  letter-spacing: 2px;
+  font-family: "Bebas Neue", sans-serif;
+  width: 750px;
+  display: none;
+  animation: appear 2s;
+}
+
+.show {
+  height: 60%;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 0vh;
+}
+.show .identifier {
+  width: 570px;
+  font-size: 30px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  background-color: #24fe00;
+  color: #fff;
+  border: 0px solid;
+  border-radius: 3px;
+}
+.show #proj {
+  background-color: #008cff;
+}
+.show #tlk {
+  background-color: #eea811;
+}
+.show #mark1, .show #mark2, .show #mark3 {
+  height: 90px;
+  background-color: transparent;
+}
+.show #technologies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.show #technologies .tech {
+  height: 250px;
+  width: 200px;
+  margin: 50px 15px 15px 15px;
+  padding: 20px;
+  background-color: rgba(62, 50, 150, 0.3568627451);
+  border: 0px solid;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: initial;
+  flex-direction: column;
+}
+.show #technologies .tech ul {
+  margin-top: 50px;
+  font-size: 28px;
+  font-family: "Bebas Neue", sans-serif;
+}
+.show #technologies .tech:hover {
+  transform: scale(1.05);
+  transition: transform 1s;
+}
+
+#talk {
+  min-height: 50vh;
+}
+#talk .gen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 50px 0;
+}
+#talk .gen .imag {
+  height: 30px;
+  background-color: #24fe00;
+  padding: 10px 7px 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 19px;
+  border: 0px solid;
+  border-radius: 50px 0 0 50px;
+}
+#talk .gen .imag img {
+  height: 35px;
+  filter: invert(100%);
+}
+#talk .gen #whats, #talk .gen #mail {
+  width: 300px;
+}
+#talk #whats, #talk #mail {
+  height: 50px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #dd7cfc;
+  border: 0px solid;
+  border-radius: 50px;
+}
+#talk #whats a, #talk #mail a {
+  color: #fff;
+  text-decoration: none;
+}
+#talk #whats a:hover, #talk #mail a:hover {
+  background-color: #dd7cfc;
+}
+
+footer {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #100C33;
+  color: #fff;
+  font-weight: 100;
+  box-shadow: 20px 0 30px 1px rgba(0, 0, 0, 0.5);
+}
+footer #power {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+footer #power #obs {
+  font-size: 10px;
+}
+footer img {
+  height: 100px;
+}
+
+@media screen and (min-width: 350px) {
+  header {
+    height: 200px;
+  }
+  header #logo {
+    width: 400px;
+    font-size: 70px;
+  }
+  header nav {
+    display: none;
+  }
+  #initial {
+    height: 50vh;
+  }
+  #principal #decoration1, #principal #decoration2, #principal #decoration3, #principal #decoration4 {
+    display: none;
+  }
+  #principal #about #nameOcup #ocp {
+    font-size: 50px;
+    color: #68657d;
+  }
+  #principal #about #nameOcup h1 {
+    font-size: 80px;
+    color: #dd7cfc;
+  }
+  #principal #about #resume {
+    color: #eebdff;
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-family: "Bebas Neue", sans-serif;
+    width: 750px;
+    display: none;
+    animation: appear 2s;
+  }
+}/*# sourceMappingURL=style.css.map */

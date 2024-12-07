@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Mono+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Rubik Mono One", monospace;
+    color: #fff;
+    overflow-x: hidden;
+
+    background: linear-gradient(100deg, #100C33 0%, #392c9b 85%);
+}
+
+header {
+    height: 12vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    background: linear-gradient(100deg, #100C33 0%, #2c2081 51%, #392c9b 85%);
+
+    font-family: "Bebas Neue", sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px 0 30px;
+
+    box-shadow: 0 0 20px 1px rgb(0, 0, 0, 0.5);
+
+    #logo {
+        font-size: 40px;
+        color: #68657D;
+
+        width: 150px;
+    }
+
+    nav {
+        color: #ff4f;
+
+        font-size: 25px;
+
+        position: relative;
+        right: 100px;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+
+            li {
+                list-style-type: none;
+                width: 160px;
+
+                display: flex;
+                justify-content: center;
+
+                a {
+                    text-decoration: none;
+
+                    color: #fff;
+
+                    span {
+                        display: none;
+                    }
+                }
+
+                a:hover {
+                    transition: .5s ease;
+                    color: #24fe00;
+
+                    span {
+                        display: inline;
+                        transition: 1s ease;
+                    }
+                }
+            }
+
+            li:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+#initial {
+    height: 70vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: end;
+
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    } 
+    100% {
+        opacity: 1;
+    }
+}
+
+.appear {
+    animation: appear 2s;
+}
+
+#principal {
+    min-height: 80vh;
+    width: 100vw;
+
+    //margin-top: 15vh;
+    //padding-top: 15vh;
+    
+    #decoration1, #decoration2, #decoration3, #decoration4 {
+        height: 100px;
+        width: 150px;
+
+        position: absolute;
+
+        div {
+            height: 0.5px;
+            width: 150px;
+
+            margin: 8px;
+            margin-left: 0;
+
+            background-color: #24fe00;
+
+            position: sticky;
+        }
+    }
+
+    #decoration1 {
+        top: 200px;
+        left: -80px;
+
+        transform: rotateZ(55deg);
+    }
+
+    #decoration2 { 
+        top: 200px;
+        left: -80px;
+
+        transform: rotateZ(-30deg); 
+    }
+
+    #decoration3 {
+        bottom: 0px;
+        left: -80px;
+
+        transform: rotateZ(20deg);
+    }
+
+    #decoration4 {
+        bottom: 10px;
+        left: -80px;
+
+        transform: rotateZ(60deg);
+    }
+
+    #about {
+        max-height: 165vh;
+        width: 80vw;
+
+        // position: absolute;
+        // top: 75vh;
+
+        padding: 0 0 0 4vw;
+
+        #mark0 {
+            height: 90px;
+            background-color: transparent;
+        }
+
+        #nameOcup {
+            #ocp {
+                font-size: 30px;
+                color: #68657d; 
+            }
+    
+            h1 {
+                font-size: 50px;
+                color: #dd7cfc;
+            }
+        }
+
+        
+
+        #resume {
+            color: #eebdff;
+            font-size: 35px;
+            letter-spacing: 2px;
+
+            font-family: "Bebas Neue", sans-serif;
+
+            width: 750px;
+
+            //margin-top: 30px;
+
+            display: none;
+
+            animation: appear 2s;
+        }
+    }
+}
+
+.show {
+    height: 60%;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    flex-direction: column;
+
+    //margin-top: 10vh;
+    padding-top: 0vh;
+
+    //display: block;
+    
+    .identifier {
+        width: 570px;
+        font-size: 30px;
+        
+        margin: 0 auto;
+        
+        text-align: center;
+        
+        padding: 10px;
+        
+        background-color: #24fe00;
+        color: #fff;
+        border: 0px solid;
+        border-radius: 3px;    
+
+        
+    }
+
+    #proj {
+        background-color: #008cff;
+    }
+
+    #tlk {
+        background-color: #eea811;
+    }
+
+    #mark1, #mark2, #mark3 {
+        height: 90px;
+        background-color: transparent;
+    }
+    
+    #technologies {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+
+        .tech {
+            height: 250px;
+            width: 200px;
+            
+
+            margin: 50px 15px 15px 15px;
+            padding: 20px;
+
+            background-color: #3e32965b;
+
+            border: 0px solid;
+            border-radius: 3px;
+
+            display: flex;
+            align-items: center;
+            justify-content: initial;
+            flex-direction: column;
+
+            ul {
+                margin-top: 50px;
+
+                font-size: 28px;
+                font-family: "Bebas Neue", sans-serif;
+            }
+        }
+
+        .tech:hover {
+            transform: scale(1.05);
+            transition: transform 1s;
+        }
+    }
+}
+
+#talk {
+    min-height: 50vh;
+
+    .gen {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
+        margin: 50px 0;
+
+        .imag {
+            height: 30px;
+
+            background-color: #24fe00;
+
+            padding: 10px 7px 10px 10px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+            left: 19px;
+
+            border: 0px solid;
+            border-radius: 50px 0 0 50px ;
+
+            img {
+                height: 35px;
+
+                filter: invert(100%);
+            }
+        }
+
+        #whats, #mail {
+            width: 300px;
+        }
+    }
+
+    #whats, #mail {
+        height: 50px;
+        width: 300px;
+        // margin-top: 50px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+        background-color: #dd7cfc;
+    
+        border: 0px solid;
+        border-radius: 50px;   
+        
+        
+        a {
+            color: #fff;
+            
+            text-decoration: none;
+                
+        }
+    
+        a:hover {
+            background-color: #dd7cfc;
+        }
+    }
+}
+
+footer {
+    height: 250px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #100C33;
+    color: #fff;
+    font-weight: 100;
+
+    box-shadow: 20px 0 30px 1px rgb(0, 0, 0, 0.5);
+
+    #power {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        #obs {
+            font-size: 10px;
+        }
+        
+    }
+
+    img {
+        height: 100px;
+    }
+}
+
+@media screen and (min-width: 350px) {
+    header {
+        height: 200px;
+
+        #logo {
+            width: 400px;
+            font-size: 70px;
+        }
+
+        nav {
+            display: none;
+        }
+    }
+
+    #initial {
+        height: 50vh;
+    }
+
+    #principal {
+        #decoration1, #decoration2, #decoration3, #decoration4 {
+            display: none;
+        }
+
+        #about {
+            #nameOcup {
+                #ocp {
+                    font-size: 50px;
+                    color: #68657d; 
+                }
+        
+                h1 {
+                    font-size: 80px;
+                    color: #dd7cfc;
+                }
+            }
+    
+            #resume {
+                color: #eebdff;
+                font-size: 35px;
+                letter-spacing: 2px;
+    
+                font-family: "Bebas Neue", sans-serif;
+    
+                width: 750px;
+    
+                //margin-top: 30px;
+    
+                display: none;
+    
+                animation: appear 2s;
+            }
+        }
+        
+    }
+}
