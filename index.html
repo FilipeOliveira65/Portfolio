@@ -3,18 +3,22 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
         <title>Filipe's Portifolio</title>
 
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300" rel="stylesheet" />
+
+
     </head>
     <body id="bd">
 
         <header>
             <p id="logo">// FOA //</p>
 
-            <nav>
+            <nav id="nav">
                 <ul>
                     <li><a href="#mark0"> <span> < </span> About Me <span> /> </span> </a></li>
                     <li><a href="#mark1"> <span> < </span> Skills <span> /> </span> </a></li>
@@ -22,6 +26,12 @@
                     <li><a href="#mark3"> <span> < </span> Talk w'me <span> /> </span> </a></li>
                 </ul>
             </nav>
+
+            <div class="menu" id="menu" onclick="atvMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </header>
 
         <section id="initial">
@@ -49,8 +59,30 @@
                     <h1>Filipe de Oliveira</h1>
                 </div>
     
-                <p id="resume">
-                    i’m 20yo and no doubts i can say that my biggest passion is programming.
+                
+                <div id="resume">
+                    <ul>
+                        <li>
+                            <span class="material-symbols-outlined">
+                            cake
+                            </span>20yo
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">
+                                home_pin
+                                </span>
+                            São Paulo - SP
+                        </li>
+                    </ul>
+
+                    <br>
+                    
+                    <p>
+                        I'm completely <strong>passionate</strong> about programming. <strong>Innovation</strong> and <strong>criativity</strong> are in my blood. I love <strong>overcoming every challenges</strong> that comes my way. <strong>Constant learning</strong> is one of my strongest characteristics.
+                    </p>
+                    
+
+                    <!-- i’m 20yo and no doubts i can say that my biggest passion is programming.
                     <br>
                     <br>
                     my first contact was with html and css with professor guanabara. the thrill i felt after creating my first website without any help gave me the impetus to learn more and more.
@@ -62,8 +94,8 @@
                     I love challenges and, as crazy as it may sound, I love facing them and overcoming them.
                     <br>
                     <br>
-                    Learning is my fuel and it's the reason that increases my passion for the area: constant learning.
-                </p>
+                    Learning is my fuel and it's the reason that increases my passion for the area: constant learning. -->
+                </div>
 
             </div>
 
@@ -114,7 +146,7 @@
                     <h3>FrameWork</h3>
 
                     <ul>
-                        <li>Loading...</li>
+                        <li>In progress...</li>
                     </ul>
                 </div>
             </div>
@@ -126,7 +158,7 @@
             <div class="identifier" id="proj">
                 <h2>Projects</h2>
             </div>
-            <div class="appear" id="technologies">
+            <div class="appear" id="proj">
                 <div class="tech" id="tech1">
                     
                 </div>
@@ -147,34 +179,36 @@
 
             <div class="identifier" id="tlk">
                 <h2>Let's to talk!</h2>
-            </div>
+            </div>  
 
-            <div class="gen">
-                <div class="imag">
-                    <img src="images/whatsapp.png" alt="">
+            <div id="all">
+                <div class="gen">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <a href="https://wa.me/5511983809400?text=Olá,+Filipe.+Tudo+bem?+" target="_blank">(11) 98380-9400</a>
                 </div>
-                
-                <div id="whats">
-                    <a href="https://wa.me/5511983809400?text=Olá,+Filipe.+Tudo+bem?+" target="_blank">Text me on WhatsApp</a>
+    
+                <div class="gen">
+                    <i class="fa-regular fa-envelope"></i>
+                    <a href="mailto:filipealexandre200110@gmail.com" target="_blank">filipealexandre200110@gmail.com</a>
+                </div>
+
+                <div class="gen">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <a href="https://www.linkedin.com/in/filipe-alexandre-b17377261/" target="_blank">Filipe Alexandre</a>
+                </div>
+
+                <div class="gen">
+                    <i class="fa-brands fa-github"></i>
+                    <a href="https://github.com/FilipeOliveira65" target="_blank">FilipeOliveira65</a>
                 </div>
             </div>
-
-            <p>- Or - </p>
-
-            <div class="gen">
-                <div class="imag">
-                    <img src="images/e-mail.png" alt="">
-                </div>
-                <div id="mail">
-                    <a href="mailto:filipealexandre200110@gmail.com">Send me an e-mail</a>
-                </div>
-            </div>
+            
             
             
         </section>
 
 
-        <footer>
+        <footer id="foot">
             <div id="power">
                 <p>powered by:</p>
                 <img src="images/brand-foa-white.png" alt="" srcset="">
@@ -184,6 +218,7 @@
         </footer>
 
         <script src="app.js"></script>
+        <script src="https://kit.fontawesome.com/e2ed0cface.js" crossorigin="anonymous" defer></script>
   
     </body>
 </html>
