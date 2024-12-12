@@ -25,24 +25,25 @@ display.onscroll = () => {
 var menu = document.getElementById("menu");
 var nav = document.getElementById("nav");
 
-function atvMenu () {
-    if (nav.style.display = "block") {
-        nav.style.display = "none";
-    } else {
-        nav.style.display = "block";
-    }
+function clsMenu () {
+    nav.style.display = "none"
 }
 
-// while ()
-// menu.addEventListener("click", function () {
-//     var nav = document.getElementById("nav");
+menu.addEventListener("click", function () {
+    
+    if (nav.style.display == "none") {
+        nav.style.display = "flex";
+    } else {
+        clsMenu();
+    }
+})
 
-//     if (nav.style.display = "none") {
-//         nav.style.display = "flex";
-//     } else {
-//         nav.style.display = "none"
-//     }
-// })
+nav.addEventListener("click", function () {
+    if (nav.style.display = "flex") {
+        clsMenu();
+    }
+})
+
 
 
 
