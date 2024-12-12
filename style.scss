@@ -140,7 +140,7 @@ header {
 }
 
 #initial {
-    height: 70vh;
+    height: 60vh;
     width: 100vw;
 
     display: flex;
@@ -225,7 +225,7 @@ header {
         padding: 0 0 0 4vw;
 
         #mark0 {
-            height: 90px;
+            height: 120px;
             background-color: transparent;
         }
 
@@ -368,6 +368,11 @@ header {
 
             ul {
                 list-style-type: none;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
 
                 margin-top: 20px;
 
@@ -544,6 +549,7 @@ footer {
         }
 
         #about {
+            font-weight: 100;
             #nameOcup {
                 #ocp {
                     font-size: 25px;
@@ -568,6 +574,11 @@ footer {
             width: 250px;
 
             font-size: 20px;
+            font-weight: 100;
+        }
+
+        #mark1, #mark2, #mark3 {
+            height: 60px;
         }
 
         #technologies {

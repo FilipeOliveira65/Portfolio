@@ -39,8 +39,10 @@ menu.addEventListener("click", function () {
 })
 
 nav.addEventListener("click", function () {
-    if (nav.style.display = "flex") {
-        clsMenu();
+    if (window.innerWidth < 1080) {
+        if (nav.style.display = "flex") {
+            clsMenu();
+        }
     }
 })
 

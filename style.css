@@ -108,7 +108,7 @@ header .menu span {
 }
 
 #initial {
-  height: 70vh;
+  height: 60vh;
   width: 100vw;
   display: flex;
   justify-content: end;
@@ -169,7 +169,7 @@ header .menu span {
   padding: 0 0 0 4vw;
 }
 #principal #about #mark0 {
-  height: 90px;
+  height: 120px;
   background-color: transparent;
 }
 #principal #about #nameOcup #ocp {
@@ -264,6 +264,10 @@ header .menu span {
 }
 .show #technologies .tech ul {
   list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin-top: 20px;
   color: #b7b7b9;
 }
@@ -379,6 +383,9 @@ footer img {
   #principal #decoration4 {
     display: none;
   }
+  #principal #about {
+    font-weight: 100;
+  }
   #principal #about #nameOcup #ocp {
     font-size: 25px;
   }
@@ -392,6 +399,10 @@ footer img {
   .show .identifier {
     width: 250px;
     font-size: 20px;
+    font-weight: 100;
+  }
+  .show #mark1, .show #mark2, .show #mark3 {
+    height: 60px;
   }
   .show #technologies {
     display: flex;
