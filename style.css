@@ -34,13 +34,9 @@ strong {
   animation: apr 2s;
 }
 
-.show {
-  display: block;
-}
-
 header {
   height: 12vh;
-  width: 100%;
+  min-width: 100%;
   position: fixed;
   top: 0;
   left: 0;
@@ -53,17 +49,17 @@ header {
   padding: 0 30px 0 30px;
 }
 header #logo {
-  width: 250px;
+  width: 150px;
   font-family: "Bebas Neue", sans-serif;
   font-size: 40px;
   font-weight: 100;
   color: #68657D;
 }
 header nav {
-  width: 60vw;
   color: #ffff44;
   font-size: 20px;
   position: relative;
+  right: 100px;
 }
 header nav ul {
   display: flex;
@@ -71,23 +67,30 @@ header nav ul {
 }
 header nav ul li {
   list-style-type: none;
-  width: 160px;
+  min-width: 180px;
   display: flex;
   justify-content: center;
 }
 header nav ul li a {
+  min-width: 180px;
   text-decoration: none;
+  text-align: center;
   color: #b7b7b9;
+  transition: all 0.5s ease-in-out;
 }
 header nav ul li a span {
-  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
-header nav ul li a:hover, header nav ul li span:hover {
-  animation: apr 2s;
+header nav ul li a:hover {
+  all: 0.5s;
   color: #24fe00;
 }
-header nav ul li a:hover span, header nav ul li span:hover span {
-  display: inline;
+header nav ul li a:hover span {
+  opacity: 1;
+}
+header nav ul li span:hover {
+  opacity: 1;
 }
 header nav ul li:first-child {
   margin-left: 0;
@@ -108,7 +111,7 @@ header .menu span {
 }
 
 #initial {
-  height: 60vh;
+  height: 70vh;
   width: 100vw;
   display: flex;
   justify-content: end;
@@ -169,7 +172,7 @@ header .menu span {
   padding: 0 0 0 4vw;
 }
 #principal #about #mark0 {
-  height: 120px;
+  height: 90px;
   background-color: transparent;
 }
 #principal #about #nameOcup #ocp {
@@ -191,6 +194,8 @@ header .menu span {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: 20px;
+  border: 0ps solid;
+  border-radius: 10px;
   display: none;
   animation: appear 4s;
 }
@@ -205,6 +210,26 @@ header .menu span {
   font-size: 40px;
   color: #dd7cfc;
   margin-right: 10px;
+}
+#principal #about #resume #curriculum {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+#principal #about #resume #curriculum button {
+  height: 35px;
+  width: 170px;
+  background-color: #68657d;
+  border: 0px solid;
+  border-radius: 5px;
+}
+#principal #about #resume #curriculum button a {
+  color: #24fe00;
+  text-decoration: none;
+  font-family: "Jost", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .show {
@@ -226,9 +251,6 @@ header .menu span {
   color: #fff;
   border: 0px solid;
   border-radius: 3px;
-}
-.show #proj {
-  background-color: #008cff;
 }
 .show #tlk {
   background-color: #eea811;
@@ -264,15 +286,86 @@ header .menu span {
 }
 .show #technologies .tech ul {
   list-style-type: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   margin-top: 20px;
   color: #b7b7b9;
 }
 .show #technologies .tech:last-child {
   border-width: 0 0 0 0;
+}
+.show #markProj {
+  background-color: #008cff;
+}
+.show #projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.show #projects a {
+  min-height: 200px;
+  width: 200px;
+  margin: 50px 20px 0px 0px;
+  padding: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #b7b7b9;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+.show #projects a .project {
+  display: flex;
+  align-items: center;
+  justify-content: initial;
+  flex-direction: column;
+  text-align: center;
+}
+.show #projects a .project h3 {
+  color: #008cff;
+  transition: all 0.5s ease-in-out;
+  font-size: 20px;
+}
+.show #projects a .project #tools {
+  max-width: 200px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.show #projects a .project #tools div {
+  margin: 2px 5px;
+  padding: 5px;
+  border: 0px solid;
+  border-radius: 5px;
+  font-size: 10px;
+  background-color: #68657D;
+  color: #fff;
+}
+.show #projects a .project #divisor {
+  height: 0px;
+  width: 100px;
+  margin: 10px 10px 10px 10px;
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  border-color: #b7b7b9;
+  transition: all 0.5s ease-in-out;
+}
+.show #projects a .project p {
+  color: #fff;
+  text-align: initial;
+}
+.show #projects a:hover {
+  box-shadow: 0px 0px 30px #008cff;
+  border-color: #008cff;
+  opacity: 1s;
+}
+.show #projects a:hover .project h3 {
+  all: 1s;
+  text-shadow: 0px 0px 30px #008cff;
+}
+.show #projects a:hover .project #divisor {
+  all: 1s;
+  border-color: #008cff;
 }
 
 #talk {
@@ -304,16 +397,34 @@ header .menu span {
 }
 #talk .gen:hover i {
   transition: 1s;
-  color: #24fe00;
-  text-shadow: 0px 0px 30px rgba(0, 255, 21, 0.5);
+  color: #eea811;
+  text-shadow: 0px 0px 30px #eea811;
 }
 #talk .gen:hover a {
   transition: 1s;
-  color: #24fe00;
-  text-shadow: 0px 0px 30px rgba(0, 255, 21, 0.5);
+  color: #eea811;
+  text-shadow: 0px 0px 30px #eea811;
 }
 #talk .gen:last-child {
   border: none;
+}
+#talk #whats, #talk #mail {
+  height: 50px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #dd7cfc;
+  border: 0px solid;
+  border-radius: 50px;
+}
+#talk #whats a, #talk #mail a {
+  color: #fff;
+  text-decoration: none;
+}
+#talk #whats a:hover, #talk #mail a:hover {
+  background-color: #dd7cfc;
 }
 
 footer {
@@ -383,9 +494,6 @@ footer img {
   #principal #decoration4 {
     display: none;
   }
-  #principal #about {
-    font-weight: 100;
-  }
   #principal #about #nameOcup #ocp {
     font-size: 25px;
   }
@@ -399,10 +507,6 @@ footer img {
   .show .identifier {
     width: 250px;
     font-size: 20px;
-    font-weight: 100;
-  }
-  .show #mark1, .show #mark2, .show #mark3 {
-    height: 60px;
   }
   .show #technologies {
     display: flex;
@@ -413,17 +517,25 @@ footer img {
     border-width: 0px 0px 1px 0;
     display: flex;
     justify-content: center;
-    margin: 0px 0 0 0;
   }
   .show #technologies .tech:last-child {
     border-width: 0px 0px 1px 0;
+  }
+  .show #projects {
+    justify-content: center;
+  }
+  .show #projects a {
+    margin: 10px 10px;
+  }
+  .show #projects a:first-child {
+    margin-top: 50px;
   }
   #talk #all {
     display: flex;
     flex-direction: column;
   }
   #talk #all .gen {
-    min-width: 250px;
+    min-width: 350px;
     margin: 50px 0 0px 0;
     padding: 20px;
     border-width: 0px 0px 1px 0px;

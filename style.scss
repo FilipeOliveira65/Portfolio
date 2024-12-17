@@ -39,13 +39,9 @@ strong {
     animation: apr 2s;
 }
 
-.show {
-    display: block;
-}
-
 header {
     height: 12vh;
-    width: 100%;
+    min-width: 100%;
 
     position: fixed;
     top: 0;
@@ -62,7 +58,7 @@ header {
     padding: 0 30px 0 30px;
 
     #logo {
-        width: 250px;
+        width: 150px;
 
         font-family: "Bebas Neue", sans-serif;
         font-size: 40px;
@@ -71,43 +67,53 @@ header {
     }
 
     nav {
-        width: 60vw;
         color: #ff4f;
 
         font-size: 20px;
 
         position: relative;
-        // right: 100px;
+        right: 100px;
 
         ul {
             display: flex;
             flex-direction: row;
-            // right: 0;
 
             li {
                 list-style-type: none;
-                width: 160px;
+                min-width: 180px;
 
                 display: flex;
                 justify-content: center;
 
                 a {
+                    min-width: 180px;
                     text-decoration: none;
+                    text-align: center;
 
                     color: #b7b7b9;
 
+                    transition: all .5s ease-in-out;
+
                     span {
-                        display: none;
+                        // display: none;
+                        opacity: 0;
+                        transition: opacity .5s ease-in-out;
                     }
                 }
 
-                a:hover, span:hover {
-                    animation: apr 2s;
+                a:hover {
+                    all: .5s;
                     color: #24fe00;
 
                     span {
-                        display: inline;
+                        // display: inline;
+                        opacity: 1;
                     }
+                }
+
+                span:hover {
+                    // display: inline;
+                    opacity: 1;
                 }
             }
 
@@ -140,7 +146,7 @@ header {
 }
 
 #initial {
-    height: 60vh;
+    height: 70vh;
     width: 100vw;
 
     display: flex;
@@ -225,7 +231,7 @@ header {
         padding: 0 0 0 4vw;
 
         #mark0 {
-            height: 120px;
+            height: 90px;
             background-color: transparent;
         }
 
@@ -259,6 +265,9 @@ header {
 
             margin-top: 20px;
 
+            border: 0ps solid;
+            border-radius: 10px;
+
             display: none;
 
             animation: appear 4s;
@@ -275,6 +284,34 @@ header {
                         color: #dd7cfc;
 
                         margin-right: 10px;
+                    }
+                }
+            }
+
+            #curriculum {
+                margin: 10px 0;
+
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+
+                
+                button {
+                    height: 35px;
+                    width: 170px;
+
+                    background-color: #68657d;
+                    
+                    border: 0px solid;
+                    border-radius: 5px;
+
+                    a {
+                        color: #24fe00;
+
+                        text-decoration: none;
+                        font-family: "Jost", sans-serif;
+                        text-transform: uppercase;
+                        font-weight: 600; 
                     }
                 }
             }
@@ -314,10 +351,6 @@ header {
         border-radius: 3px;    
 
         
-    }
-
-    #proj {
-        background-color: #008cff;
     }
 
     #tlk {
@@ -369,11 +402,6 @@ header {
             ul {
                 list-style-type: none;
 
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-
                 margin-top: 20px;
 
                 color: #b7b7b9;
@@ -396,6 +424,117 @@ header {
         //     transition: transform 1s;
         // }
     }
+    
+    #markProj {
+        background-color: #008cff;
+    }
+    
+    #projects {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+
+        a {
+            min-height: 200px;
+            width: 200px;
+            
+
+            margin: 50px 20px 0px 0px;
+            padding: 10px;
+
+            // background-color: #7d74c05b;
+
+            border-style: solid;
+            border-width: 1px;
+            border-color: #b7b7b9;
+            border-radius: 5px;
+            
+            text-decoration: none;
+            
+            transition: all .5s ease-in-out;
+            .project {
+                display: flex;
+                align-items: center;
+                justify-content: initial;
+                flex-direction: column;
+                text-align: center;
+
+                h3 {
+                    color: #008cff;
+                    transition: all .5s ease-in-out;
+    
+                    font-size: 20px;
+                }
+
+
+                #tools {
+                    max-width: 200px;
+
+                    margin-top: 10px;
+
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+
+                    div {
+                        margin: 2px 5px;
+                        padding: 5px;
+                        
+                        border: 0px solid;
+                        border-radius: 5px;
+                        
+                        font-size: 10px;
+                        
+                        background-color: #68657D;
+                        color: #fff;
+                    }
+                }
+
+                #divisor {
+                    height: 0px;
+                    width: 100px;
+
+                    margin: 10px 10px 10px 10px;
+
+                    border-style: solid;
+                    border-width: 1px 0 0 0;
+                    border-color: #b7b7b9;
+
+                    transition: all .5s ease-in-out;
+
+                }
+
+                p {
+                    color: #fff;
+
+                    text-align: initial;
+                }
+                
+            }
+        }
+
+        a:hover {
+            box-shadow: 0px 0px 30px #008cff;
+            border-color: #008cff;
+
+
+            opacity: 1s;
+            .project {
+                h3 {
+                    all: 1s;
+                    text-shadow: 0px 0px 30px #008cff;
+                }
+
+                #divisor {
+                    all: 1s;
+                    border-color: #008cff;
+                }
+            }
+
+        }
+    }
 }
 
 #talk {
@@ -407,8 +546,6 @@ header {
     }
 
     .gen {
-        // width: 250px;
-
         display: flex;
         align-items: center;
         justify-content: center;
@@ -440,20 +577,48 @@ header {
         i {
             transition: 1s;
 
-            color: #24fe00;
-            text-shadow: 0px 0px 30px rgba(0, 255, 21, 0.5); 
+            color: #eea811;
+            text-shadow: 0px 0px 30px #eea811; 
         }
 
         a {
             transition: 1s;
 
-            color: #24fe00;
-            text-shadow: 0px 0px 30px rgba(0, 255, 21, 0.5); 
+            color: #eea811;
+            text-shadow: 0px 0px 30px #eea811; 
         }
     }
 
     .gen:last-child {
         border: none;
+    }
+
+    #whats, #mail {
+        height: 50px;
+        width: 300px;
+        // margin-top: 50px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+        background-color: #dd7cfc;
+    
+        border: 0px solid;
+        border-radius: 50px;   
+        
+        
+        a {
+            color: #fff;
+            
+            text-decoration: none;
+                
+        }
+    
+        a:hover {
+            background-color: #dd7cfc;
+        }
     }
 }
 
@@ -549,7 +714,6 @@ footer {
         }
 
         #about {
-            font-weight: 100;
             #nameOcup {
                 #ocp {
                     font-size: 25px;
@@ -574,11 +738,6 @@ footer {
             width: 250px;
 
             font-size: 20px;
-            font-weight: 100;
-        }
-
-        #mark1, #mark2, #mark3 {
-            height: 60px;
         }
 
         #technologies {
@@ -591,8 +750,6 @@ footer {
 
                 display: flex;
                 justify-content: center;
-
-                margin: 0px 0 0 0;
 
                 // h3 {
                 //     background-color: #008cff;
@@ -608,6 +765,18 @@ footer {
                 border-width: 0px 0px 1px 0;
             }
         }
+
+        #projects {
+            justify-content: center;
+
+            a {
+                margin: 10px 10px;
+            }
+
+            a:first-child {
+                margin-top: 50px;
+            }
+        }
     }
 
     #talk {
@@ -616,7 +785,7 @@ footer {
             flex-direction: column;
 
             .gen {
-                min-width: 250px;
+                min-width: 350px;
 
                 margin: 50px 0 0px 0;
                 padding: 20px;
