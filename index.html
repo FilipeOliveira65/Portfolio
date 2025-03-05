@@ -10,8 +10,6 @@
 
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300" rel="stylesheet" />
-
-
     </head>
     <body id="bd">
 
@@ -35,19 +33,18 @@
         </header>
 
         <section id="initial">
-            <!-- <img src="images/gdf_page-0001_1_-removebg-preview-removebg.png" alt=""> -->
         </section>
 
         <section id="principal">
-            <div id="decoration1">
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            </div>
-            <div id="decoration2"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            </div>
-            <div id="decoration3">
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            </div>
-            <div id="decoration4"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+
+            <div id="presentation">
+                <img src="porfile.png" alt="">
+                <div id="showingAdjectives">
+                    <p id="iam">
+                        I'm...
+                    </p>
+                    <p id="adjective"></p>
+                </div>
             </div>
 
             <div id="about" >
@@ -55,10 +52,9 @@
                 <div id="nameOcup">
                     <div class="identifier" id="mark0"></div>
 
-                    <p id="ocp">Jr. Front-End Developer</p>
+                    <p id="ocp">Front-End Developer</p>
                     <h1>Filipe de Oliveira</h1>
                 </div>
-    
                 
                 <div id="resume">
                     <ul>
@@ -77,7 +73,7 @@
 
                     <div id="curriculum">
                         <!-- <i class="fa-solid fa-download"></i> -->
-                        <button><a href="curriculo-filipe-de-oliveira-desenvolvedor-web.pdf" download>Download CV</a></button>
+                        <button><a href="filipe-estagiario-frontend.pdf" download>Download CV</a></button>
                     </div>
 
                     <br>
@@ -85,25 +81,8 @@
                     <p>
                         I'm completely <strong>passionate</strong> about programming. <strong>Innovation</strong> and <strong>criativity</strong> are in my blood. I love <strong>overcoming every challenges</strong> that comes my way. <strong>Constant learning</strong> is one of my strongest characteristics.
                     </p>
-                    
-
-                    <!-- i’m 20yo and no doubts i can say that my biggest passion is programming.
-                    <br>
-                    <br>
-                    my first contact was with html and css with professor guanabara. the thrill i felt after creating my first website without any help gave me the impetus to learn more and more.
-                    <br>
-                    <br>
-                    innovation and creativity are my strongest skills, which was very important for me to choose the front-end.
-                    <br>
-                    <br>
-                    I love challenges and, as crazy as it may sound, I love facing them and overcoming them.
-                    <br>
-                    <br>
-                    Learning is my fuel and it's the reason that increases my passion for the area: constant learning. -->
                 </div>
-
             </div>
-
         </section>
 
         <section class="show" id="qualifications" >
@@ -115,8 +94,6 @@
 
             <div class="appear" id="technologies">
                 <div class="tech" id="tech1">
-                    <!-- <img src="images/html-logo.png" alt=""> -->
-
                     <h3>Web</h3>
 
                     <ul>
@@ -126,8 +103,6 @@
                     </ul>
                 </div>
                 <div class="tech" id="tech2">
-                    <!-- <img src="images/css-logo.png" alt=""> -->
-
                     <h3>Front-end</h3>
 
                     <ul>
@@ -136,8 +111,6 @@
                 </div>
                 
                 <div class="tech" id="tech3">
-                    <!-- <img src="images/javascript-logo.png" alt=""> -->
-
                     <h3>Back-end</h3>
 
                     <ul>
@@ -146,12 +119,21 @@
                 </div>
 
                 <div class="tech" id="tech4">
-                    <!-- <img src="images/sass-logo.png" alt=""> -->
-
                     <h3>FrameWork</h3>
 
                     <ul>
                         <li>React js</li>
+                    </ul>
+                </div>
+
+                <div class="tech" id="tech5">
+                    <h3>Others</h3>
+
+                    <ul>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Figma</li>
+                        <li>UI/UX</li>
                     </ul>
                 </div>
             </div>
@@ -165,8 +147,29 @@
             </div>
 
             <div class="appear" id="projects">
-                <a href="https://filipeoliveira65.github.io/login-screen/" target="_blank">
+                
+                <a href="https://filipeoliveira65.github.io/money/" target="_blank">
+                    
                     <div class="project" id="proj1">
+                        <h3>Money.t (beta)</h3>
+
+                        <div id="tools">
+                            <div>html</div>
+                            <div>sass</div>
+                            <div>JavaScript</div>
+                            <div>responsive</div>
+                        </div>
+
+                        <div id="divisor"></div>
+
+                        <p>
+                            A <strong>beta program</strong> that allows users to manage their financial life <strong>simply, quickly and securely</strong>. 
+                        </p>
+                    </div>
+                </a>
+
+                <a href="https://filipeoliveira65.github.io/login-screen/" target="_blank">
+                    <div class="project" id="proj2">
                         <h3>Functional Login Page</h3>
 
                         <div id="tools">
@@ -181,6 +184,26 @@
                         <p>
                             It's a small project I created to train my knowledge of <strong>“LocalStorage”</strong>. <br>
                             The site is <strong>fully responsive</strong> and I used the <strong>“Mobile First”</strong> concept.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="" target="_blank">
+                    <div class="project" id="proj3">
+                        <h3>Nadine (W.I.P)</h3>
+
+                        <div id="tools">
+                            <div>html</div>
+                            <div>sass</div>
+                            <div>JavaScript</div>
+                            <div>React JS.</div>
+                            <div>responsive</div>
+                        </div>
+
+                        <div id="divisor"></div>
+
+                        <p>
+                            An <strong>educational</strong> website with <strong>information and tips on anxiety and depression</strong>. It also has a pseudo-system for <strong>scheduling</strong> appointments.
                         </p>
                     </div>
                 </a>
@@ -215,25 +238,20 @@
                     <i class="fa-brands fa-github"></i>
                     <a href="https://github.com/FilipeOliveira65" target="_blank">FilipeOliveira65</a>
                 </div>
-            </div>
-            
-            
+            </div>     
             
         </section>
 
-
-        <footer id="foot">
+        <footer class="show" id="footer">
             <div id="power">
                 <p>powered by:</p>
                 <img src="brand-foa-white.png" alt="" srcset="">
                 <p id="obs"><i>FOA TECH is a project of startup created by Filipe de Oliveira, owner of this portfolio.</i></p>
             </div>
-            
         </footer>
 
         <script src="app.js"></script>
         
         <script src="https://kit.fontawesome.com/e2ed0cface.js" crossorigin="anonymous" defer></script>
-  
     </body>
 </html>

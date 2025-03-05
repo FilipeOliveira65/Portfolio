@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   color: #fff;
-  overflow-x: hidden;
+  overflow: auto;
   background: linear-gradient(100deg, #0a0a0e 0%, #1e1a3b 85%);
 }
 
@@ -36,11 +37,12 @@ strong {
 
 header {
   height: 12vh;
-  min-width: 100%;
+  width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
+  overflow: clip;
   background: linear-gradient(100deg, #100C33 0%, #2c2081 51%, #392c9b 85%);
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
   display: flex;
@@ -59,7 +61,6 @@ header nav {
   color: #ffff44;
   font-size: 20px;
   position: relative;
-  right: 100px;
 }
 header nav ul {
   display: flex;
@@ -99,8 +100,6 @@ header .menu {
   height: 8vh;
   width: 90px;
   display: none;
-  position: fixed;
-  right: 0;
 }
 header .menu span {
   height: 3px;
@@ -114,10 +113,31 @@ header .menu span {
   height: 70vh;
   width: 100vw;
   display: flex;
-  justify-content: end;
+  justify-content: center;
+  align-items: center;
+}
+#initial #saying-adjectives {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#initial #saying-adjectives p {
+  font-size: 50px;
 }
 
 @keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes smoothLoad {
   0% {
     opacity: 0;
   }
@@ -125,46 +145,35 @@ header .menu span {
     opacity: 1;
   }
 }
-.appear {
-  animation: appear 2s;
-}
-
 #principal {
   min-height: 40vh;
   width: 100vw;
+  overflow: hidden;
 }
-#principal #decoration1, #principal #decoration2, #principal #decoration3, #principal #decoration4 {
-  height: 100px;
-  width: 150px;
+#principal #presentation {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
   position: absolute;
+  top: 30%;
+  left: 4vw;
+  transition: all 1s ease-in-out;
 }
-#principal #decoration1 div, #principal #decoration2 div, #principal #decoration3 div, #principal #decoration4 div {
-  height: 0.5px;
-  width: 150px;
-  margin: 8px;
-  margin-left: 0;
-  background-color: #24fe00;
-  position: sticky;
+#principal #presentation img {
+  height: 300px;
+  margin-right: 40px;
+  border-radius: 131px 126px 135px 200px;
+  -webkit-border-radius: 131px 126px 135px 200px;
+  -moz-border-radius: 131px 126px 135px 200px;
 }
-#principal #decoration1 {
-  top: 200px;
-  left: -80px;
-  transform: rotateZ(55deg);
+#principal #presentation #showingAdjectives #iam {
+  font-size: 25px;
+  color: #dd7cfc;
 }
-#principal #decoration2 {
-  top: 200px;
-  left: -80px;
-  transform: rotateZ(-30deg);
-}
-#principal #decoration3 {
-  bottom: 0px;
-  left: -80px;
-  transform: rotateZ(20deg);
-}
-#principal #decoration4 {
-  bottom: 10px;
-  left: -80px;
-  transform: rotateZ(60deg);
+#principal #presentation #showingAdjectives #adjective {
+  font-size: 50px;
+  color: #68657D;
+  animation: appear unset infinite;
 }
 #principal #about {
   max-height: 165vh;
@@ -183,7 +192,7 @@ header .menu span {
 #principal #about #nameOcup h1 {
   font-family: "Rubik Mono One", monospace;
   font-size: 50px;
-  color: #dd7cfc;
+  color: rgb(221, 124, 252);
 }
 #principal #about #resume {
   width: 90%;
@@ -194,10 +203,10 @@ header .menu span {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: 20px;
-  border: 0ps solid;
+  border: 0px solid;
   border-radius: 10px;
   display: none;
-  animation: appear 4s;
+  animation: smoothLoad 4s;
 }
 #principal #about #resume ul {
   list-style-type: none;
@@ -223,6 +232,7 @@ header .menu span {
   background-color: #68657d;
   border: 0px solid;
   border-radius: 5px;
+  transition: all 1s ease-in-out;
 }
 #principal #about #resume #curriculum button a {
   color: #24fe00;
@@ -230,6 +240,10 @@ header .menu span {
   font-family: "Jost", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
+}
+#principal #about #resume #curriculum button:hover {
+  box-shadow: 0px 0px 30px #24fe00;
+  all: 1s;
 }
 
 .show {
@@ -239,6 +253,7 @@ header .menu span {
   align-items: center;
   flex-direction: column;
   padding-top: 0vh;
+  animation: smoothLoad 4s;
 }
 .show .identifier {
   width: 570px;
@@ -280,13 +295,14 @@ header .menu span {
 .show #technologies .tech h3 {
   color: #24fe00;
   text-shadow: 0px 0px 30px rgba(0, 255, 21, 0.5);
-  font-size: 20px;
+  font-size: 25px;
   border: 0px solid;
   border-radius: 3px;
 }
 .show #technologies .tech ul {
   list-style-type: none;
   margin-top: 20px;
+  font-size: 25px;
   color: #b7b7b9;
 }
 .show #technologies .tech:last-child {
@@ -301,7 +317,7 @@ header .menu span {
   flex-wrap: wrap;
 }
 .show #projects a {
-  min-height: 200px;
+  min-height: 250px;
   width: 200px;
   margin: 50px 20px 0px 0px;
   padding: 10px;
@@ -313,6 +329,7 @@ header .menu span {
   transition: all 0.5s ease-in-out;
 }
 .show #projects a .project {
+  min-height: 250px;
   display: flex;
   align-items: center;
   justify-content: initial;
@@ -450,27 +467,145 @@ footer img {
   height: 100px;
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 390px) {
   header {
     height: 8vh;
     padding: 0;
+    display: flex;
+    justify-content: space-between;
   }
   header #logo {
     font-size: 30px;
     margin: 0px 0 0 30px;
-    position: fixed;
   }
-  header nav {
+  header #nav {
+    position: fixed;
     width: 100vw;
-    top: 100px;
+    top: 50px;
     left: 0;
     padding: 30px;
-    position: relative;
     display: none;
     justify-content: center;
     background: linear-gradient(100deg, #100C33 0%, #2c2081 51%, #392c9b 85%);
+    z-index: 999;
   }
-  header nav ul {
+  header #nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+  header .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 30px;
+    z-index: 999;
+  }
+  #initial {
+    height: 30vh;
+  }
+  #principal {
+    min-height: 90vh;
+  }
+  #principal #presentation {
+    top: 20%;
+  }
+  #principal #presentation img {
+    height: 100px;
+    margin-right: 20px;
+  }
+  #principal #presentation #showingAdjectives #iam {
+    font-size: 15px;
+  }
+  #principal #presentation #showingAdjectives #adjective {
+    font-size: 25px;
+  }
+  #principal #about #nameOcup #ocp {
+    font-size: 25px;
+  }
+  #principal #about #nameOcup h1 {
+    font-size: 35px;
+  }
+  #principal #about #resume {
+    font-size: 20px;
+    text-align: initial;
+  }
+  .show .identifier {
+    width: 250px;
+    font-size: 20px;
+  }
+  .show #technologies {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .show #technologies .tech {
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    margin: 0px 0px 0px 0px;
+    padding: 20px;
+    border-width: 0px 0px 1px 0;
+  }
+  .show #technologies .tech:last-child {
+    border-width: 0px 0px 1px 0;
+  }
+  .show #projects {
+    justify-content: center;
+  }
+  .show #projects a {
+    margin: 10px 10px;
+  }
+  .show #projects a .project {
+    display: flex;
+    align-items: center;
+  }
+  .show #projects a:first-child {
+    margin-top: 50px;
+  }
+  #talk #all {
+    display: flex;
+    flex-direction: column;
+  }
+  #talk #all .gen {
+    min-width: 350px;
+    margin: 0px 0 0px 0;
+    padding: 20px;
+    font-size: 15px;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: #b7b7b9;
+  }
+  #talk #all .gen:last-child {
+    border: none;
+  }
+  footer {
+    padding: 20px;
+  }
+}
+@media (min-width: 390px) and (max-width: 419px) {
+  header {
+    height: 8vh;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  header #logo {
+    font-size: 30px;
+    margin: 0px 0 0 30px;
+  }
+  header #nav {
+    position: fixed;
+    width: 100vw;
+    top: 50px;
+    left: 0;
+    padding: 30px;
+    display: none;
+    justify-content: center;
+    background: linear-gradient(100deg, #100C33 0%, #2c2081 51%, #392c9b 85%);
+    z-index: 999;
+  }
+  header #nav ul {
     display: flex;
     flex-direction: column;
   }
@@ -488,11 +623,18 @@ footer img {
   #principal {
     min-height: 80vh;
   }
-  #principal #decoration1,
-  #principal #decoration2,
-  #principal #decoration3,
-  #principal #decoration4 {
-    display: none;
+  #principal #presentation {
+    top: 15%;
+  }
+  #principal #presentation img {
+    height: 150px;
+    margin-right: 20px;
+  }
+  #principal #presentation #showingAdjectives #iam {
+    font-size: 20px;
+  }
+  #principal #presentation #showingAdjectives #adjective {
+    font-size: 30px;
   }
   #principal #about #nameOcup #ocp {
     font-size: 25px;
@@ -513,10 +655,14 @@ footer img {
     justify-content: center;
   }
   .show #technologies .tech {
-    height: 150px;
-    border-width: 0px 0px 1px 0;
+    min-height: 150px;
     display: flex;
-    justify-content: center;
+    justify-content: initial;
+    align-items: center;
+    margin: 10px 10px 20px 0px;
+    padding: 20px;
+    border-width: 0px 0px 1px 0;
+    border-radius: 5px;
   }
   .show #technologies .tech:last-child {
     border-width: 0px 0px 1px 0;
@@ -527,6 +673,10 @@ footer img {
   .show #projects a {
     margin: 10px 10px;
   }
+  .show #projects a .project {
+    display: flex;
+    align-items: center;
+  }
   .show #projects a:first-child {
     margin-top: 50px;
   }
@@ -536,14 +686,128 @@ footer img {
   }
   #talk #all .gen {
     min-width: 350px;
-    margin: 50px 0 0px 0;
+    margin: 0px 0 0px 0;
     padding: 20px;
+    font-size: 15px;
     border-width: 0px 0px 1px 0px;
     border-style: solid;
     border-color: #b7b7b9;
-    font-size: 15px;
   }
   #talk #all .gen:last-child {
     border: none;
+  }
+  footer {
+    padding: 20px;
+  }
+}
+@media (min-width: 420px) and (max-width: 1060px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  header #nav {
+    position: fixed;
+    width: 100vw;
+    top: 50px;
+    left: 0;
+    padding: 30px;
+    display: none;
+    justify-content: center;
+    background: linear-gradient(100deg, #100C33 0%, #2c2081 51%, #392c9b 85%);
+    z-index: 999;
+  }
+  header #nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+  header .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 30px;
+    z-index: 999;
+  }
+  #initial {
+    height: 30vh;
+  }
+  #principal {
+    min-height: 80vh;
+  }
+  #principal #presentation {
+    top: 15%;
+  }
+  #principal #presentation img {
+    height: 150px;
+    margin-right: 20px;
+  }
+  #principal #presentation #showingAdjectives #iam {
+    font-size: 20px;
+  }
+  #principal #presentation #showingAdjectives #adjective {
+    font-size: 30px;
+  }
+  #principal #about #nameOcup #ocp {
+    font-size: 25px;
+  }
+  #principal #about #nameOcup h1 {
+    font-size: 35px;
+  }
+  #principal #about #resume {
+    font-size: 20px;
+    text-align: initial;
+  }
+  .show .identifier {
+    width: 250px;
+    font-size: 20px;
+  }
+  .show #technologies {
+    display: flex;
+    justify-content: center;
+  }
+  .show #technologies .tech {
+    min-height: 150px;
+    display: flex;
+    justify-content: initial;
+    align-items: center;
+    margin: 10px 10px 20px 0px;
+    padding: 20px;
+    border-width: 1px 1px 0px 0;
+    border-radius: 5px;
+  }
+  .show #technologies .tech:last-child {
+    border-width: 1px 1px 0px 0;
+  }
+  .show #projects {
+    justify-content: center;
+  }
+  .show #projects a {
+    margin: 10px 10px;
+  }
+  .show #projects a .project {
+    display: flex;
+    align-items: center;
+  }
+  .show #projects a:first-child {
+    margin-top: 50px;
+  }
+  #talk #all {
+    display: flex;
+    flex-direction: column;
+  }
+  #talk #all .gen {
+    min-width: 350px;
+    margin: 0px 0 0px 0;
+    padding: 20px;
+    font-size: 15px;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: #b7b7b9;
+  }
+  #talk #all .gen:last-child {
+    border: none;
+  }
+  footer {
+    padding: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
