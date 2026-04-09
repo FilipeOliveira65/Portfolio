@@ -1,0 +1,75 @@
+header {
+  height: 9vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: linear-gradient(100deg, #100C33 0%, #2c2081 51%, #392c9b 85%);
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+}
+header #logo {
+  width: 150px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 40px;
+  font-weight: 100;
+  color: #68657D;
+}
+header nav {
+  color: #ffff44;
+  font-size: 20px;
+  position: relative;
+  right: 10px;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+}
+header nav ul li {
+  list-style-type: none;
+  min-width: 180px;
+  display: flex;
+  justify-content: center;
+}
+header nav ul li a {
+  min-width: 180px;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Jost", sans-serif;
+  color: #b7b7b9;
+  transition: all 0.5s ease-in-out;
+}
+header nav ul li a span {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+header nav ul li a:hover {
+  all: 0.5s;
+  color: #24fe00;
+}
+header nav ul li a:hover span {
+  opacity: 1;
+}
+header nav ul li span:hover {
+  opacity: 1;
+}
+header nav ul li:first-child {
+  margin-left: 0;
+}
+header .menu {
+  height: 8vh;
+  width: 90px;
+  display: none;
+  position: fixed;
+}
+header .menu span {
+  height: 3px;
+  width: 35px;
+  margin: 3px;
+  display: block;
+  background-color: #68657D;
+}/*# sourceMappingURL=header.component.css.map */
