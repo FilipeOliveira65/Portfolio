@@ -1,0 +1,69 @@
+.principal .section-header {
+  background-color: #eea811;
+}
+.principal #contacts-list {
+  display: flex;
+  flex-direction: row;
+}
+.principal .contact-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 50px 0 50px 0;
+  padding: 20px;
+  color: #b7b7b9;
+  font-size: 20px;
+  border-width: 0px 1px 0 0;
+  border-color: #b7b7b9;
+  border-style: solid;
+}
+.principal .contact-card i {
+  font-size: 30px;
+  margin-right: 10px;
+}
+.principal .contact-card a {
+  color: #b7b7b9;
+  text-decoration: none;
+}
+.principal .contact-card:hover i {
+  transition: 1s;
+  color: #eea811;
+  text-shadow: 0px 0px 30px #eea811;
+}
+.principal .contact-card:hover a {
+  transition: 1s;
+  color: #eea811;
+  text-shadow: 0px 0px 30px #eea811;
+}
+.principal .contact-card:last-child {
+  border: none;
+}
+.principal #whats, .principal #mail {
+  height: 50px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #dd7cfc;
+  border: 0px solid;
+  border-radius: 50px;
+}
+.principal #whats a, .principal #mail a {
+  color: #fff;
+  text-decoration: none;
+}
+.principal #whats a:hover, .principal #mail a:hover {
+  background-color: #dd7cfc;
+}
+
+@media (max-width: 950px) {
+  .principal #contacts-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .principal #contacts-list .contact-card {
+    border-width: 0 0 1px 0;
+  }
+}/*# sourceMappingURL=professional-contacts.component.css.map */

@@ -1,0 +1,65 @@
+<section 
+    class="principal" 
+    id="hard-skills">
+    <div 
+        class="section-header" 
+        id="mark">
+        <h2>Skills</h2>
+    </div>
+
+    <div 
+        class="appear" 
+        id="technologies">
+        <div 
+            class="hard-skill-area">
+            <h3>Front-end</h3>
+
+            <ul>
+                <li 
+                    *ngFor="let frontSk of front_skills"
+                    class="secondary-text">
+                {{frontSk}}
+            </li>
+            </ul>
+        </div>
+
+        <div 
+            class="hard-skill-area">
+            <h3>Back-end</h3>
+
+            <ul>
+                <li 
+                    *ngFor="let backSk of back_skills"
+                    class="secondary-text">
+                {{backSk}}
+                </li>
+            </ul>
+        </div>
+
+         <div 
+            class="hard-skill-area">
+            <h3>Database</h3>
+
+            <ul>
+                <li 
+                    *ngFor="let databaseSk of database_skills"
+                    class="secondary-text">
+                {{databaseSk}}
+                </li>
+            </ul>
+        </div>
+
+        <div 
+            class="hard-skill-area">
+            <h3>Others</h3>
+
+            <ul>
+                <li 
+                    *ngFor="let othersSk of others_skills"
+                    class="secondary-text">
+                {{othersSk}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

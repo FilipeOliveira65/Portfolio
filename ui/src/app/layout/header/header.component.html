@@ -1,9 +1,10 @@
 <header>
     <p id="logo">
-        // FOA //
+        //FOA
     </p>
 
-    <nav>
+    <nav
+        id="desktop-menu">
         <ul>
             <li>
                 <a href="#mark0"> 
@@ -11,7 +12,7 @@
                         < 
                     </span> 
 
-                    About Me 
+                    <strong>About Me</strong> 
                     <span> 
                         /> 
                     </span> 
@@ -22,7 +23,7 @@
                     <span>
                         < 
                     </span> 
-                    Skills 
+                    <strong>Skills</strong> 
                     <span> 
                         /> 
                     </span> 
@@ -33,7 +34,7 @@
                     <span>
                         < 
                     </span> 
-                    Projects 
+                    <strong>Projects</strong> 
                     <span> 
                         /> 
                     </span> 
@@ -44,7 +45,7 @@
                     <span>
                         <
                     </span> 
-                    Talk w'me 
+                    <strong>Talk w'me</strong> 
                     <span> 
                         /> 
                     </span> 
@@ -53,9 +54,37 @@
         </ul>
     </nav>
 
+    <nav 
+        *ngIf="showMenu"
+        id="mobile-menu">
+        <ul>
+            <li>
+                <a href="#mark0">
+                    <strong>About Me</strong> 
+                </a>
+            </li>
+            <li>
+                <a href="#mark1"> 
+                    <strong>Skills</strong> 
+                </a>
+            </li>
+            <li>
+                <a href="#mark2"> 
+                    <strong>Projects</strong> 
+                </a>
+            </li>
+            <li>
+                <a href="#mark3"> 
+                    <strong>Talk w'me</strong>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
     <div 
         class="menu" 
         id="menu"
+        (click)="toggleMenu()"
         >
         <span></span>
         <span></span>

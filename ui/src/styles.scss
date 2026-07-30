@@ -25,3 +25,82 @@ strong {
     color: #24fe00;
     text-shadow: 0px 0px 30px rgba(0, 255, 21, 0.5);
 }
+
+.primary-text, li {
+    font-size: 23px !important;
+}
+
+.secondary-text {
+    font-size: 20px !important;
+}
+
+.principal {
+    height: 60%;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding-top: 0vh;
+
+    .section-header {
+        width: 570px;
+        
+        margin: 50px 0 50px 0;
+        padding: 10px;
+        
+        text-align: center;
+        font-family: "Rubik Mono One", monospace;
+        font-size: 30px;
+        color: #fff;
+
+        border: 0px solid;
+        border-radius: 3px;    
+    }
+}
+
+.divisor {
+    height: 0px;
+    width: 100px;
+    
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    border-color: #b7b7b9;
+
+    transition: all .5s ease-in-out;
+}
+
+@media (max-width: 1080px) {
+    .principal {
+
+        .section-header {
+            width: 250px;
+            
+            margin: 50px 0 50px 0;
+            padding: 10px;
+            
+            text-align: center;
+            font-family: "Rubik Mono One", monospace;
+            font-size: 20px;
+            color: #fff;
+
+            border: 0px solid;
+            border-radius: 3px;    
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .primary-text {
+        font-size: 20px !important;
+    }
+
+    .secondary-text {
+        font-size: 18px !important;
+    }
+}

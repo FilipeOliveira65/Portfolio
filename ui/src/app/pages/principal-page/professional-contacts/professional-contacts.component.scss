@@ -1,0 +1,104 @@
+.principal {
+    .section-header {  
+        background-color: #eea811; 
+    }
+
+    #contacts-list {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contact-card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
+        margin: 0px 0 50px 0;
+        padding: 20px;
+        
+        color: #b7b7b9;
+        font-size: 20px;
+
+        border-width: 0px 1px 0 0 ;
+        border-color: #b7b7b9;
+        border-style: solid;
+
+        i {
+            font-size: 30px;
+
+            margin-right: 10px;
+        }
+
+        a {
+            color: #b7b7b9;
+
+            text-decoration: none;
+        }
+    }
+
+    .contact-card:hover {
+        i {
+            transition: 1s;
+
+            color: #eea811;
+            text-shadow: 0px 0px 30px #eea811; 
+        }
+
+        a {
+            transition: 1s;
+
+            color: #eea811;
+            text-shadow: 0px 0px 30px #eea811; 
+        }
+    }
+
+    .contact-card:last-child {
+        border: none;
+    }
+
+    #whats, #mail {
+        height: 50px;
+        width: 300px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+        background-color: #dd7cfc;
+    
+        border: 0px solid;
+        border-radius: 50px;   
+        
+        a {
+            color: #fff;
+            
+            text-decoration: none;
+                
+        }
+    
+        a:hover {
+            background-color: #dd7cfc;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .principal {
+        #contacts-list {
+            display: flex;
+            flex-direction: column;
+
+            .contact-card {
+                width: 180px;
+
+                margin-bottom: 0;
+
+                flex-direction: column;
+                
+                border-width: 0 0 1px 0;
+            }
+        }
+    }
+}

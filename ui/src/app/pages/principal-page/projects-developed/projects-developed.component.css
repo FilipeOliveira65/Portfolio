@@ -1,0 +1,86 @@
+strong {
+  color: #008cff;
+  text-shadow: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.principal .section-header {
+  background-color: #008cff;
+}
+.principal #projects-area {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.principal #projects-area .project-card {
+  display: flex;
+  align-items: center;
+  justify-content: initial;
+  flex-direction: column;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+.principal #projects-area .project-card a {
+  min-height: 200px;
+  width: 230px;
+  padding: 15px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #b7b7b9;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+.principal #projects-area .project-card a h3 {
+  color: #008cff;
+  transition: all 0.5s ease-in-out;
+  font-size: 23px;
+}
+.principal #projects-area .project-card a .used-tech-tags-area {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.principal #projects-area .project-card a .used-tech-tags-area span {
+  font-size: 10px;
+  margin: 0 5px 5px 0;
+  padding: 5px;
+  background-color: #68657D;
+  color: #fff;
+  border: 0 solid;
+  border-radius: 3px;
+}
+.principal #projects-area .project-card a #divisor {
+  height: 0px;
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  border-color: #b7b7b9;
+  transition: all 0.5s ease-in-out;
+}
+.principal #projects-area .project-card a p {
+  color: #fff;
+  text-align: center;
+}
+.principal #projects-area .project-card:hover {
+  box-shadow: 0px 0px 30px #008cff;
+  border-color: #008cff;
+  opacity: 1s;
+}
+.principal #projects-area .project-card:hover a h3 {
+  all: 1s;
+  text-shadow: 0px 0px 30px #008cff;
+}
+.principal #projects-area .project-card:hover a #divisor {
+  all: 1s;
+  border-color: #008cff;
+}
+.principal #projects-area .project-card:hover a strong {
+  text-shadow: 0px 0px 30px #008cff;
+}/*# sourceMappingURL=projects-developed.component.css.map */

@@ -1,0 +1,55 @@
+.principal .section-header {
+  background-color: #24fe00;
+}
+.principal #technologies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.principal #technologies .hard-skill-area {
+  min-height: 150px;
+  width: 200px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: initial;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 0px 1px 0 0;
+  border-color: #b7b7b9;
+}
+.principal #technologies .hard-skill-area h3 {
+  color: #24fe00;
+  text-shadow: 0px 0px 30px rgba(0, 255, 21, 0.5);
+  font-size: 20px;
+  border: 0px solid;
+  border-radius: 3px;
+}
+.principal #technologies .hard-skill-area ul {
+  list-style-type: none;
+  margin-top: 20px;
+  color: #b7b7b9;
+}
+.principal #technologies .hard-skill-area h3, .principal #technologies .hard-skill-area ul {
+  font-size: 25px;
+}
+.principal #technologies .hard-skill-area:last-child {
+  border-width: 0 0 0 0;
+}
+
+@media (max-width: 955px) {
+  #technologies {
+    display: flex;
+    justify-content: center;
+    flex-direction: column !important;
+  }
+  #technologies .hard-skill-area {
+    min-height: 150px;
+    border-width: 0px 0px 1px 0 !important;
+    display: flex;
+    justify-content: center;
+  }
+  #technologies .hard-skill-area:last-child {
+    border-width: 0px 0px 1px 0;
+  }
+}/*# sourceMappingURL=hard-skills.component.css.map */

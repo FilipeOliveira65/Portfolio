@@ -16,7 +16,7 @@
         #nameOcup {
             #ocp {
                 font-family: "Rubik Mono One", monospace;
-                font-size: 30px;
+                font-size: 30px !important;
                 color: #68657d; 
             }
     
@@ -33,7 +33,7 @@
             color: #b7b7b9;
 
             font-family: "Jost", sans-serif;
-            font-size: 25px;
+            font-size: 20px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -42,10 +42,6 @@
 
             border: 0ps solid;
             border-radius: 10px;
-
-            // display: none;
-
-            // animation: appear 4s;
 
             ul {
                 list-style-type: none;
@@ -63,7 +59,7 @@
                 }
             }
 
-            #curriculum {
+            #curriculum-buttom {
                 margin: 10px 0;
 
                 display: flex;
@@ -98,13 +94,35 @@
 
                 button:hover {
                     background-color: #24fe00;
-                    // box-shadow: 0px 0px 30px #24fe00;
+                    box-shadow: 0px 0px 30px #24fe00;
                     all: 1s;
                     
                     a {
                         color: #000;
                         all: 1s;
                     }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    #resume {
+        width: 90vw !important;
+
+        #curriculum-buttom {
+            width: 170px;
+
+            margin: 0 auto !important;
+            margin-top: 30px !important;
+
+            buttom {
+                background-color: #24fe00;
+                box-shadow: 0px 0px 30px #24fe00;
+                
+                a {
+                    color: #000;
                 }
             }
         }

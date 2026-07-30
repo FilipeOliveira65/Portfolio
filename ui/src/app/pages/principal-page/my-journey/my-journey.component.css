@@ -1,0 +1,127 @@
+.principal {
+  min-height: 600px;
+}
+.principal .section-header {
+  background-color: #F2668B;
+}
+.principal #journey-area {
+  min-height: 350px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+}
+.principal #journey-area #track-line {
+  min-height: 400px;
+  width: 1px;
+  transform: scaleX(0.5);
+  position: absolute;
+  background-color: #fff;
+}
+.principal #journey-area #journey-main-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.principal #journey-area #journey-main-area .experience-major-area {
+  width: 897px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.principal #journey-area #journey-main-area .experience-major-area .experience-card {
+  width: 430px;
+  padding-left: 20px;
+  border: solid #F2668B;
+  border-width: 1px 0 0 0;
+}
+.principal #journey-area #journey-main-area .experience-major-area .experience-card .experience-title {
+  font-size: 23px;
+  color: #F2668B;
+}
+.principal #journey-area #journey-main-area .experience-major-area .experience-card .experience-details {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.principal #journey-area #journey-main-area .experience-major-area .experience-card .experience-details .divisor {
+  height: 10px;
+  width: 1px;
+  margin: 0 8px 0 8px;
+  background-color: #fff;
+}
+.principal #journey-area #journey-main-area .experience-major-area .experience-card .experience-description ul {
+  list-style-type: none;
+}
+.principal #journey-area #journey-main-area .experience-major-area .experience-card .experience-description ul li {
+  color: #b7b7b9;
+}
+.principal #journey-area #journey-main-area .experience-major-area .experience-card .experience-description ul li:before {
+  content: "- ";
+}
+.principal #journey-area #journey-main-area .experience-major-area .experience-card .experience-tags-area {
+  width: 90%;
+  display: flex;
+  justify-content: initial;
+  flex-wrap: wrap;
+}
+.principal #journey-area #journey-main-area .experience-major-area .experience-card .experience-tags-area .experience-tag {
+  font-size: 10px;
+  margin: 0 5px 5px 0;
+  padding: 5px;
+  background-color: #68657D;
+  border: 0 solid;
+  border-radius: 3px;
+}
+.principal #journey-area #journey-main-area #first {
+  align-items: flex-start;
+}
+.principal #journey-area #journey-main-area #second {
+  align-items: flex-end;
+}
+
+@media (max-width: 950px) {
+  .principal #journey-area {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .principal #journey-area #track-line {
+    display: none;
+  }
+  .principal #journey-area #journey-main-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .principal #journey-area #journey-main-area .experience-major-area {
+    width: 300px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+  }
+  .principal #journey-area #journey-main-area .experience-major-area .experience-card {
+    width: 300px;
+  }
+  .principal #journey-area #journey-main-area .experience-major-area .experience-card .experience-details {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .principal #journey-area #journey-main-area .experience-major-area .experience-card .experience-details .divisor {
+    height: 10px;
+    width: 1px;
+    margin: 0 8px 0 8px;
+    background-color: #fff;
+  }
+  .principal #journey-area #journey-main-area #first,
+  .principal #journey-area #journey-main-area #second {
+    align-items: center;
+  }
+}/*# sourceMappingURL=my-journey.component.css.map */

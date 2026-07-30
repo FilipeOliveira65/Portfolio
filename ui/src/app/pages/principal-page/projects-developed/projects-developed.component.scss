@@ -1,0 +1,119 @@
+strong {
+    color: #008cff;
+    text-shadow: none;
+
+    transition: all .5s ease-in-out;
+}
+
+.principal {
+    .section-header {
+        background-color: #008cff;
+    }
+
+    #projects-area {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        .project-card {
+            display: flex;
+            align-items: center;
+            justify-content: initial;
+            flex-direction: column;
+            text-align: center;
+
+            transition: all .5s ease-in-out;
+
+            a {
+                min-height: 200px;
+                width: 230px; 
+
+                padding: 15px;
+
+                border-style: solid;
+                border-width: 1px;
+                border-color: #b7b7b9;
+                border-radius: 5px;
+                
+                text-decoration: none;
+                
+                transition: all .5s ease-in-out;
+
+                h3 {
+                    color: #008cff;
+                    transition: all .5s ease-in-out;
+
+                    font-size: 23px;
+                }
+
+                .used-tech-tags-area {
+                    width: 90%;
+
+                    margin: 0 auto;
+                    margin-top: 20px;
+
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+
+                    span {
+                        font-size: 10px;
+
+                        margin: 0 5px 5px 0;
+                        padding: 5px;
+
+                        background-color: #68657D;
+                        color: #fff;
+
+                        border: 0 solid;
+                        border-radius: 3px;
+                    }
+                }
+
+                #divisor {
+                    height: 0px;
+                    width: 100px;
+                    
+                    margin: 0 auto;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+
+                    border-style: solid;
+                    border-width: 1px 0 0 0;
+                    border-color: #b7b7b9;
+
+                    transition: all .5s ease-in-out;
+                }
+
+                p {
+                    color: #fff;
+
+                    text-align: center;
+                }
+            }
+        }
+
+        .project-card:hover {
+            box-shadow: 0px 0px 30px #008cff;
+            border-color: #008cff;
+
+            opacity: 1s;
+
+            a {
+                h3 {
+                    all: 1s;
+                    text-shadow: 0px 0px 30px #008cff;
+                }
+
+                #divisor {
+                    all: 1s;
+                    border-color: #008cff;
+                }
+
+                strong {
+                    text-shadow: 0px 0px 30px #008cff;
+                }
+            }
+        }
+    }
+}

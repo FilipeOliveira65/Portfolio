@@ -13,7 +13,7 @@
 }
 #principal #about #nameOcup #ocp {
   font-family: "Rubik Mono One", monospace;
-  font-size: 30px;
+  font-size: 30px !important;
   color: #68657d;
 }
 #principal #about #nameOcup h1 {
@@ -25,13 +25,16 @@
   width: 90%;
   color: #b7b7b9;
   font-family: "Jost", sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: 20px;
   border: 0ps solid;
   border-radius: 10px;
+}
+#principal #about #resume p {
+  font-size: 25px !important;
 }
 #principal #about #resume ul {
   list-style-type: none;
@@ -45,13 +48,13 @@
   color: #dd7cfc;
   margin-right: 10px;
 }
-#principal #about #resume #curriculum {
+#principal #about #resume #curriculum-buttom {
   margin: 10px 0;
   display: flex;
   align-items: center;
   flex-direction: row;
 }
-#principal #about #resume #curriculum button {
+#principal #about #resume #curriculum-buttom button {
   height: 35px;
   width: 170px;
   background-color: #68657d;
@@ -60,7 +63,7 @@
   cursor: pointer;
   transition: all 1s ease-in-out;
 }
-#principal #about #resume #curriculum button a {
+#principal #about #resume #curriculum-buttom button a {
   color: #24fe00;
   text-decoration: none;
   font-family: "Jost", sans-serif;
@@ -68,11 +71,30 @@
   font-weight: 600;
   transition: all 1s ease-in-out;
 }
-#principal #about #resume #curriculum button:hover {
+#principal #about #resume #curriculum-buttom button:hover {
   background-color: #24fe00;
+  box-shadow: 0px 0px 30px #24fe00;
   all: 1s;
 }
-#principal #about #resume #curriculum button:hover a {
+#principal #about #resume #curriculum-buttom button:hover a {
   color: #000;
   all: 1s;
+}
+
+@media (max-width: 950px) {
+  #resume {
+    width: 100vw !important;
+  }
+  #resume #curriculum-buttom {
+    width: 170px;
+    margin: 0 auto !important;
+    margin-top: 30px !important;
+  }
+  #resume #curriculum-buttom buttom {
+    background-color: #24fe00;
+    box-shadow: 0px 0px 30px #24fe00;
+  }
+  #resume #curriculum-buttom buttom a {
+    color: #000;
+  }
 }/*# sourceMappingURL=professional-presentation.component.css.map */
