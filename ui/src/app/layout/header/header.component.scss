@@ -26,7 +26,9 @@ header {
         font-family: "Bebas Neue", sans-serif;
         font-size: 40px;
         font-weight: 100;
+
         color: #68657D;
+        text-shadow: 0px 0px 30px rgba(0, 255, 21, 0.5);
     }
 
     nav {
@@ -89,6 +91,10 @@ header {
         }
     }
 
+    #mobile-menu {
+        display: none;
+    }
+
     .menu  {
         height: 8vh;
         width: 90px;
@@ -96,10 +102,9 @@ header {
         display: none;
 
         position: fixed;
-        // right: 0;
 
         span {
-            height: 3px;
+            height: 2px;
             width: 35px;
 
             margin: 3px;
@@ -111,7 +116,7 @@ header {
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 960px) {
     header {
 
         display: flex;
@@ -150,7 +155,7 @@ header {
             justify-content: center;
             flex-direction: column;
 
-            right: 40px;
+            right: 0px;
         }
     }
 }

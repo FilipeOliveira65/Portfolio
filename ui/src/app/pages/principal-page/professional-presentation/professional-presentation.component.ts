@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, linkedSignal } from '@angular/core';
 
 @Component({
   selector: 'app-professional-presentation',
-  imports: [],
+  standalone: true,
   templateUrl: './professional-presentation.component.html',
   styleUrl: './professional-presentation.component.scss',
 })
@@ -34,5 +34,12 @@ export class ProfessionalPresentationComponent {
     }
 
     return this.currentAuthorAger
+  }
+
+  buttonToDownloadCV() {
+    const turnButtonIntoLink = document.createElement("a")
+    turnButtonIntoLink.href = "/curriculum-file/curriculo-filipe-de-oliveira-dev-fullstack.pdf"
+    turnButtonIntoLink.download = "curriculo-filipe-de-oliveira-dev-fullstack.pdf"
+    turnButtonIntoLink.click()
   }
 }

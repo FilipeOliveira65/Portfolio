@@ -16,6 +16,6 @@ export class HeaderComponent {
   }
 
   get showMenu(): boolean {
-    return window.innerWidth > 1200 || this.menuIsOpen
+    return window.innerWidth > 960 || this.menuIsOpen
   }
 }
