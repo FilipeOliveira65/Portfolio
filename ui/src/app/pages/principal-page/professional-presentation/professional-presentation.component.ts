@@ -38,7 +38,7 @@ export class ProfessionalPresentationComponent {
 
   buttonToDownloadCV() {
     const turnButtonIntoLink = document.createElement("a")
-    turnButtonIntoLink.href = "/curriculum-file/curriculo-filipe-de-oliveira-dev-fullstack.pdf"
+    turnButtonIntoLink.href = `${document.baseURI}curriculum-file/curriculo-filipe-de-oliveira-dev-fullstack.pdf`
     turnButtonIntoLink.download = "curriculo-filipe-de-oliveira-dev-fullstack.pdf"
     turnButtonIntoLink.click()
   }
